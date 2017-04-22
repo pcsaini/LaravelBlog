@@ -55,6 +55,7 @@ class PostController extends Controller
     public function show($id)
     {
         //
+
     }
 
     /**
@@ -95,5 +96,7 @@ class PostController extends Controller
     public function destroy($id)
     {
         //
+        Post::destroy($id);
+        return Redirect::route('posts.index');
     }
 }
